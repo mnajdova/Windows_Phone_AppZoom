@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="broj" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloNumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMainCategories">
+        <s:complexType />
+      </s:element>
+      <s:element name="getMainCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getMainCategoriesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCategories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mainCategory" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCategoriesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getApplicationsByCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="categoryId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getApplicationsByCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getApplicationsByCategoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getApplicationById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getApplicationByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getApplicationByIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPublishers">
+        <s:complexType />
+      </s:element>
+      <s:element name="getPublishersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPublishersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getApplicationsByPublisher">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="publisherId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getApplicationsByPublisherResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getApplicationsByPublisherResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getApplicationsByReviews">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="from" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="to" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getApplicationsByReviewsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getApplicationsByReviewsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getApplicationsByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getApplicationsByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getApplicationsByNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getApplicationsByRecommendation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getApplicationsByRecommendationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getApplicationsByRecommendationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setLike">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setLikeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="setLikeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registerUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registerUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registerUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getComments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCommentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCommentsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloNumber" />
+  </wsdl:message>
+  <wsdl:message name="HelloNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMainCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:getMainCategories" />
+  </wsdl:message>
+  <wsdl:message name="getMainCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:getMainCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:getCategories" />
+  </wsdl:message>
+  <wsdl:message name="getCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:getCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationsByCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:getApplicationsByCategory" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationsByCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:getApplicationsByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:getApplicationById" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:getApplicationByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPublishersSoapIn">
+    <wsdl:part name="parameters" element="tns:getPublishers" />
+  </wsdl:message>
+  <wsdl:message name="getPublishersSoapOut">
+    <wsdl:part name="parameters" element="tns:getPublishersResponse" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationsByPublisherSoapIn">
+    <wsdl:part name="parameters" element="tns:getApplicationsByPublisher" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationsByPublisherSoapOut">
+    <wsdl:part name="parameters" element="tns:getApplicationsByPublisherResponse" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationsByReviewsSoapIn">
+    <wsdl:part name="parameters" element="tns:getApplicationsByReviews" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationsByReviewsSoapOut">
+    <wsdl:part name="parameters" element="tns:getApplicationsByReviewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationsByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:getApplicationsByName" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationsByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:getApplicationsByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationsByRecommendationSoapIn">
+    <wsdl:part name="parameters" element="tns:getApplicationsByRecommendation" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationsByRecommendationSoapOut">
+    <wsdl:part name="parameters" element="tns:getApplicationsByRecommendationResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUserSoapIn">
+    <wsdl:part name="parameters" element="tns:getUser" />
+  </wsdl:message>
+  <wsdl:message name="getUserSoapOut">
+    <wsdl:part name="parameters" element="tns:getUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="setLikeSoapIn">
+    <wsdl:part name="parameters" element="tns:setLike" />
+  </wsdl:message>
+  <wsdl:message name="setLikeSoapOut">
+    <wsdl:part name="parameters" element="tns:setLikeResponse" />
+  </wsdl:message>
+  <wsdl:message name="registerUserSoapIn">
+    <wsdl:part name="parameters" element="tns:registerUser" />
+  </wsdl:message>
+  <wsdl:message name="registerUserSoapOut">
+    <wsdl:part name="parameters" element="tns:registerUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCommentsSoapIn">
+    <wsdl:part name="parameters" element="tns:getComments" />
+  </wsdl:message>
+  <wsdl:message name="getCommentsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCommentsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WPServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloNumber">
+      <wsdl:input message="tns:HelloNumberSoapIn" />
+      <wsdl:output message="tns:HelloNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMainCategories">
+      <wsdl:input message="tns:getMainCategoriesSoapIn" />
+      <wsdl:output message="tns:getMainCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCategories">
+      <wsdl:input message="tns:getCategoriesSoapIn" />
+      <wsdl:output message="tns:getCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByCategory">
+      <wsdl:input message="tns:getApplicationsByCategorySoapIn" />
+      <wsdl:output message="tns:getApplicationsByCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationById">
+      <wsdl:input message="tns:getApplicationByIdSoapIn" />
+      <wsdl:output message="tns:getApplicationByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPublishers">
+      <wsdl:input message="tns:getPublishersSoapIn" />
+      <wsdl:output message="tns:getPublishersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByPublisher">
+      <wsdl:input message="tns:getApplicationsByPublisherSoapIn" />
+      <wsdl:output message="tns:getApplicationsByPublisherSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByReviews">
+      <wsdl:input message="tns:getApplicationsByReviewsSoapIn" />
+      <wsdl:output message="tns:getApplicationsByReviewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByName">
+      <wsdl:input message="tns:getApplicationsByNameSoapIn" />
+      <wsdl:output message="tns:getApplicationsByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByRecommendation">
+      <wsdl:input message="tns:getApplicationsByRecommendationSoapIn" />
+      <wsdl:output message="tns:getApplicationsByRecommendationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <wsdl:input message="tns:getUserSoapIn" />
+      <wsdl:output message="tns:getUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setLike">
+      <wsdl:input message="tns:setLikeSoapIn" />
+      <wsdl:output message="tns:setLikeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registerUser">
+      <wsdl:input message="tns:registerUserSoapIn" />
+      <wsdl:output message="tns:registerUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getComments">
+      <wsdl:input message="tns:getCommentsSoapIn" />
+      <wsdl:output message="tns:getCommentsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WPServiceSoap" type="tns:WPServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloNumber">
+      <soap:operation soapAction="http://tempuri.org/HelloNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMainCategories">
+      <soap:operation soapAction="http://tempuri.org/getMainCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCategories">
+      <soap:operation soapAction="http://tempuri.org/getCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByCategory">
+      <soap:operation soapAction="http://tempuri.org/getApplicationsByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationById">
+      <soap:operation soapAction="http://tempuri.org/getApplicationById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPublishers">
+      <soap:operation soapAction="http://tempuri.org/getPublishers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByPublisher">
+      <soap:operation soapAction="http://tempuri.org/getApplicationsByPublisher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByReviews">
+      <soap:operation soapAction="http://tempuri.org/getApplicationsByReviews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByName">
+      <soap:operation soapAction="http://tempuri.org/getApplicationsByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByRecommendation">
+      <soap:operation soapAction="http://tempuri.org/getApplicationsByRecommendation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <soap:operation soapAction="http://tempuri.org/getUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setLike">
+      <soap:operation soapAction="http://tempuri.org/setLike" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerUser">
+      <soap:operation soapAction="http://tempuri.org/registerUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getComments">
+      <soap:operation soapAction="http://tempuri.org/getComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WPServiceSoap12" type="tns:WPServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloNumber">
+      <soap12:operation soapAction="http://tempuri.org/HelloNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMainCategories">
+      <soap12:operation soapAction="http://tempuri.org/getMainCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCategories">
+      <soap12:operation soapAction="http://tempuri.org/getCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByCategory">
+      <soap12:operation soapAction="http://tempuri.org/getApplicationsByCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationById">
+      <soap12:operation soapAction="http://tempuri.org/getApplicationById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPublishers">
+      <soap12:operation soapAction="http://tempuri.org/getPublishers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByPublisher">
+      <soap12:operation soapAction="http://tempuri.org/getApplicationsByPublisher" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByReviews">
+      <soap12:operation soapAction="http://tempuri.org/getApplicationsByReviews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByName">
+      <soap12:operation soapAction="http://tempuri.org/getApplicationsByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationsByRecommendation">
+      <soap12:operation soapAction="http://tempuri.org/getApplicationsByRecommendation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <soap12:operation soapAction="http://tempuri.org/getUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setLike">
+      <soap12:operation soapAction="http://tempuri.org/setLike" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerUser">
+      <soap12:operation soapAction="http://tempuri.org/registerUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getComments">
+      <soap12:operation soapAction="http://tempuri.org/getComments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WPService">
+    <wsdl:port name="WPServiceSoap" binding="tns:WPServiceSoap">
+      <soap:address location="http://169.254.80.80/WP_AppsService/WPService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WPServiceSoap12" binding="tns:WPServiceSoap12">
+      <soap12:address location="http://169.254.80.80/WP_AppsService/WPService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

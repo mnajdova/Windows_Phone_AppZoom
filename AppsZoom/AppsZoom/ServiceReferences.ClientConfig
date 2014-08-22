@@ -1,0 +1,16 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="WPServiceSoap" maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://169.254.80.80/WP_AppsService/WPService.asmx"
+                binding="basicHttpBinding" bindingConfiguration="WPServiceSoap"
+                contract="MyService.WPServiceSoap" name="WPServiceSoap" />
+        </client>
+    </system.serviceModel>
+</configuration>

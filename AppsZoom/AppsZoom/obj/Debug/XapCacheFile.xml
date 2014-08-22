@@ -1,0 +1,18 @@
+﻿<xapCache source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\Bin\Debug\AppsZoom_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="6/24/2014 7:43:54 PM">
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\obj\Debug\AppsZoom.dll" archivePath="AppsZoom.dll" lastWriteTime="6/24/2014 7:43:53 PM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\Assets\likeIconWP.png" archivePath="Assets\likeIconWP.png" lastWriteTime="6/24/2014 11:19:34 AM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\Assets\searchIcon.png" archivePath="Assets\searchIcon.png" lastWriteTime="6/20/2014 12:25:33 PM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\ServiceReferences.ClientConfig" archivePath="ServiceReferences.ClientConfig" lastWriteTime="6/15/2014 10:51:58 AM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="6/13/2014 1:49:04 PM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="6/13/2014 1:49:04 PM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="6/13/2014 1:49:04 PM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="6/13/2014 1:49:04 PM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="6/13/2014 1:49:04 PM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="6/24/2014 6:45:19 PM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="6/13/2014 1:49:04 PM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="6/13/2014 1:49:04 PM" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\Libraries\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="3/3/2013 6:40:38 PM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\packages\Newtonsoft.Json.6.0.3\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll" archivePath="Newtonsoft.Json.dll" lastWriteTime="6/17/2014 5:18:23 PM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\packages\Newtonsoft.Json.6.0.3\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.xml" archivePath="Newtonsoft.Json.xml" lastWriteTime="6/17/2014 5:18:23 PM" />
+  <file source="E:\visual studio 2012\DiscoverWindowsPhoneTools1\AppsZoom\AppsZoom\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="6/24/2014 6:45:19 PM" />
+</xapCache>
